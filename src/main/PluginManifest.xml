@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:fishmovie="http://schemas.nesp.com/ppk/res/fishmovie"
+<manifest
+    xmlns:fishmovie="http://www.w3.org/2001/XMLSchema-instance"
+    fishmovie:schemaLocation="http://schema.nesp.com/ppk/res/fishmovie ../../sdk/manifest.xsd"
     identifier="com.nesp.movie.plugin.4kwu">
 
     <plugin
@@ -8,7 +10,7 @@
         fishmovie:summary="在这里写一段简介"
         fishmovie:resourceType="video"
         fishmovie:introduction="在这里写一段介绍"
-        fishmovie:author="1.0"
+        fishmovie:author="小丑鱼"
         fishmovie:vipType=""
         fishmovie:updateTime="2020/09/21"
         fishmovie:versionName=""
@@ -16,11 +18,7 @@
         fishmovie:minSdkVersion="6.0"
         fishmovie:targetSdkVersion="6.0">
 
-        <tags>
-            <item>标签1</item>
-            <item>平板电脑</item>
-            <item>标签2</item>
-        </tags>
+        <tags>标签1 平板电脑 标签2</tags>
 
         <page
             fishmovie:type="main"
@@ -29,7 +27,7 @@
             <dsl></dsl>
         </page>
 
-        <page fishmovie:type="list">
+        <page fishmovie:type="videos">
 
         </page>
 
