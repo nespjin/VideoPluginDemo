@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="http://schema.nesp.com/ppk/res/fishmovie"
+    xmlns="http://schema.nesp.com/ppk/res/fishmovie">
+
+    <xs:element name="manifest">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="plugin">
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element name="tags" type="valuelist" />
+                            <xs:element name="page">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element name="javascript" type="xs:string" />
+                                        <xs:element name="dsl" type="xs:string" />
+                                    </xs:all>
+                                    <xs:attribute name="type" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="main" />
+                                                <xs:enumeration value="videos" />
+                                                <xs:enumeration value="search" />
+                                                <xs:enumeration value="play" />
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                    <xs:attribute name="url" type="xs:string" />
+                                    <xs:attribute name="movieUrl" type="xs:string" />
+                                    <xs:attribute name="soapUrl" type="xs:string" />
+                                    <xs:attribute name="varietyUrl" type="xs:string" />
+                                    <xs:attribute name="animUrl" type="xs:string" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:all>
+                        <xs:attribute name="name" type="xs:string" use="required" />
+                        <xs:attribute name="host" type="xs:string" use="required" />
+                        <xs:attribute name="summary" type="xs:string" use="required" />
+                        <xs:attribute name="resourceType" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="video" />
+                                    <xs:enumeration value="music" />
+                                    <xs:enumeration value="book" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="introduction" type="xs:string" use="required" />
+                        <xs:attribute name="author" type="xs:string" use="required" />
+                        <xs:attribute name="vipType" type="xs:integer" use="required" />
+                        <xs:attribute name="updateTime" type="xs:date" use="required" />
+                        <xs:attribute name="versionName" type="xs:string" use="required" />
+                        <xs:attribute name="versionCode" type="xs:integer" use="required" />
+                        <xs:attribute name="minSdkVersion" type="xs:integer" use="required" />
+                        <xs:attribute name="targetSdkVersion" type="xs:integer" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:all>
+            <xs:attribute name="identifier" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+
+    <!--    <xs:simpleType name="resourceType">-->
+    <!--        <xs:restriction base="xs:string">-->
+    <!--            <xs:enumeration value="video" />-->
+    <!--            <xs:enumeration value="music" />-->
+    <!--            <xs:enumeration value="book" />-->
+    <!--        </xs:restriction>-->
+    <!--    </xs:simpleType>-->
+
+    <!--    <xs:simpleType name="pageType">-->
+    <!--        <xs:restriction base="xs:string">-->
+    <!--            <xs:enumeration value="main" />-->
+    <!--            <xs:enumeration value="videos" />-->
+    <!--            <xs:enumeration value="search" />-->
+    <!--            <xs:enumeration value="play" />-->
+    <!--        </xs:restriction>-->
+    <!--    </xs:simpleType>-->
+
+    <xs:simpleType name="valuelist">
+        <xs:list itemType="xs:string" />
+    </xs:simpleType>
+
+</xs:schema>
