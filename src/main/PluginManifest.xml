@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:fishmovie="http://schemas.nesp.com/ppk/res/fishmovie"
+    identifier="com.nesp.movie.plugin.4kwu">
+
+    <plugin
+        fishmovie:name="4k屋"
+        fishmovie:host="http://m.kkkkmao.com/"
+        fishmovie:summary="在这里写一段简介"
+        fishmovie:resourceType="video"
+        fishmovie:introduction="在这里写一段介绍"
+        fishmovie:author="1.0"
+        fishmovie:vipType=""
+        fishmovie:updateTime="2020/09/21"
+        fishmovie:versionName=""
+        fishmovie:versionCode="1"
+        fishmovie:minSdkVersion="6.0"
+        fishmovie:targetSdkVersion="6.0">
+
+        <tags>
+            <item>标签1</item>
+            <item>平板电脑</item>
+            <item>标签2</item>
+        </tags>
+
+        <page
+            fishmovie:type="main"
+            fishmovie:url="">
+            <javascript></javascript>
+            <dsl></dsl>
+        </page>
+
+        <page fishmovie:type="list">
+
+        </page>
+
+        <page fishmovie:type="search">
+            <javascript></javascript>
+            <dsl></dsl>
+        </page>
+
+        <page fishmovie:type="play">
+            <javascript></javascript>
+            <dsl></dsl>
+        </page>
+
+    </plugin>
+
+</manifest>
